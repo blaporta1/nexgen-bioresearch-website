@@ -106,15 +106,15 @@ export default function HomePage() {
             Unlock 25% Off<br />Your First Order!
           </h1>
 
-          {/* Vial image — below headline, right-aligned */}
-          <div className="flex justify-end mb-4 -mt-2">
+          {/* Vial image — below headline, centered and large */}
+          <div className="flex justify-center mb-5">
             <img
               src="/images/products/ghk-cu.png"
               alt="NexGen GHK-Cu 50mg vial"
               style={{
-                width: 200,
+                width: 280,
                 objectFit: 'contain',
-                filter: 'drop-shadow(0 12px 32px rgba(0,0,0,0.5))',
+                filter: 'drop-shadow(0 16px 40px rgba(0,0,0,0.55))',
               }}
             />
           </div>
