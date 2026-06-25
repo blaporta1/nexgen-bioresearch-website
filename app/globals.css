@@ -225,18 +225,12 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 767px) {
-  /* Anchor image to left so headline & badges stay visible */
+  /* Replace image with gradient on mobile — image was designed for 16:9
+     widescreen and the baked-in text clips on portrait viewports */
   .hero-section {
-    background-position: left top;
-    min-height: 460px !important;
+    background-image: linear-gradient(135deg, #0A1520 0%, #0E1B2E 55%, #0D3270 100%) !important;
+    min-height: auto !important;
     max-height: none !important;
     aspect-ratio: auto !important;
-  }
-
-  /* Widen form so it's comfortably tappable */
-  .hero-form-wrapper {
-    top: 60% !important;
-    width: 84% !important;
-    padding: 0 4% 0 5% !important;
   }
 }

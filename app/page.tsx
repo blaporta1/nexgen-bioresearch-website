@@ -95,9 +95,88 @@ export default function HomePage() {
         aria-label="Unlock 25% Off Your First Order — Subscribe for exclusive offers"
         style={{ aspectRatio: '16 / 9', minHeight: '520px', maxHeight: '90vh' }}
       >
-        {/* Email subscribe form — below trust badges, above logo */}
+        {/* ── MOBILE hero content (gradient bg, HTML text) ── */}
+        <div className="md:hidden relative z-10 px-6 pt-10 pb-20">
+          <h1
+            className="text-white font-extrabold leading-tight mb-6"
+            style={{ fontSize: 'clamp(34px, 10vw, 48px)', letterSpacing: '-0.025em' }}
+          >
+            Unlock 25% Off<br />Your First Order!
+          </h1>
+
+          {/* Trust badges */}
+          <div className="flex gap-5 mb-8">
+            {[
+              { icon: Shield, label: 'Research\nGrade' },
+              { icon: FlaskConical, label: 'Third-Party\nTested' },
+              { icon: CheckCircle, label: 'Trusted\nQuality' },
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="flex flex-col items-center gap-1.5 text-center">
+                <Icon size={22} style={{ color: '#3A85E0' }} />
+                <span className="text-white/70 leading-tight whitespace-pre-line"
+                  style={{ fontSize: 11, fontFamily: 'var(--font-jetbrains)' }}>
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Subscribe form */}
+          <form onSubmit={e => e.preventDefault()} className="flex items-center mb-2" style={{ maxWidth: 360 }}>
+            <input
+              type="email"
+              placeholder="Email address"
+              className="flex-1 outline-none"
+              style={{
+                padding: '13px 18px',
+                fontSize: 14,
+                background: 'rgba(255,255,255,0.96)',
+                borderRadius: '50px 0 0 50px',
+                border: 'none',
+                color: '#0E1B2E',
+                fontFamily: 'inherit',
+                minWidth: 0,
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                padding: '13px 20px',
+                fontSize: 14,
+                fontWeight: 700,
+                background: '#0E1B2E',
+                borderRadius: '0 50px 50px 0',
+                border: 'none',
+                cursor: 'pointer',
+                color: '#fff',
+                fontFamily: 'inherit',
+                flexShrink: 0,
+                transition: 'background 0.2s',
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#1568D3' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#0E1B2E' }}
+            >
+              Subscribe
+            </button>
+          </form>
+
+          <div className="flex gap-3 mt-6">
+            <Link href="/shop"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white"
+              style={{ background: '#1568D3' }}>
+              Shop Peptides <ArrowRight size={15} />
+            </Link>
+            <Link href="/coa"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white/80 border"
+              style={{ borderColor: 'rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.07)' }}>
+              <FileCheck size={15} /> COA Library
+            </Link>
+          </div>
+        </div>
+
+        {/* ── DESKTOP: image form overlay ── */}
         <div
-          className="hero-form-wrapper absolute left-0"
+          className="hero-form-wrapper absolute left-0 hidden md:block"
           style={{ top: '63%', width: '44%', padding: '0 3% 0 5%' }}
         >
           <form
