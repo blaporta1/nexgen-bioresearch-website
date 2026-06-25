@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0E1B2E;
+  --color-navy-deep: #0E1B2E;
+  --color-navy-light: #162440;
+  --color-signal: #1568D3;
+  --color-signal-dark: #0F4FA8;
+  --color-signal-10: #E8F1FB;
+  --color-signal-30: #B3CDEF;
+  --color-signal-60: #6BA3E2;
+  --color-slate: #5B6B80;
+  --color-frost: #C2D8E0;
+  --color-cloud: #F4F7FB;
+  --font-sans: var(--font-bricolage), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #0E1B2E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F4F7FB; }
+::-webkit-scrollbar-thumb { background: #C2D8E0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #5B6B80; }
+
+/* Selection */
+::selection { background: #B3CDEF; color: #0E1B2E; }
+
+/* Compliance banner */
+.compliance-banner {
+  background: #0E1B2E;
+  color: #C2D8E0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(194, 216, 224, 0.15);
+}
+
+/* Nav */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(14, 27, 46, 0.08);
+}
+
+/* Gradient overlays */
+.hero-gradient {
+  background: linear-gradient(135deg, #0E1B2E 0%, #162440 40%, #0F4FA8 100%);
+}
+
+.section-gradient {
+  background: linear-gradient(180deg, #F4F7FB 0%, #ffffff 100%);
+}
+
+/* Card hover */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(14, 27, 46, 0.12);
+  border-color: #1568D3;
+}
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, #C2D8E0 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Signal blue gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #1568D3, #3A85E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated dot */
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.dot-pulse { animation: dotPulse 2s ease-in-out infinite; }
+
+/* Scan line animation */
+@keyframes scanLine {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1568D3, transparent);
+  animation: scanLine 3s linear infinite;
+  opacity: 0.6;
+}
+
+/* Input focus ring */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  ring: 2px solid #1568D3;
+}
+
+/* Button transitions */
+.btn-primary {
+  background: #1568D3;
+  color: white;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  background: #0F4FA8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(21, 104, 211, 0.35);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  border: 1.5px solid #0E1B2E;
+  color: #0E1B2E;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.btn-outline:hover {
+  background: #0E1B2E;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Tag */
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* Mono data */
+.data-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5B6B80;
+}
+
+/* Purity badge */
+.purity-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: #1568D3;
+  background: #E8F1FB;
+  border: 1px solid #B3CDEF;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* COA row hover */
+.coa-row {
+  transition: background 0.15s ease;
+  border-bottom: 1px solid #F4F7FB;
+}
+.coa-row:hover {
+  background: #F4F7FB;
+}
+
+/* Checkbox custom */
+input[type="checkbox"] {
+  accent-color: #1568D3;
+  width: 18px;
+  height: 18px;
+}
+
+/* Sticky header offset for anchor links */
+[id] {
+  scroll-margin-top: 100px;
+}
