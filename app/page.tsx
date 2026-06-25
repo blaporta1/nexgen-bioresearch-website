@@ -188,119 +188,52 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* ── DESKTOP: 2-column HTML layout over background image ── */}
-        {/* Left-to-right gradient overlay — hides baked-in image text on left, lets vial show through on right */}
+        {/* ── DESKTOP: subscribe form over background image (no overlay — image shows fully) ── */}
         <div
-          className="hidden md:block absolute inset-0 pointer-events-none"
-          style={{
-            background: 'linear-gradient(to right, rgba(8,17,28,0.97) 0%, rgba(8,17,28,0.93) 30%, rgba(8,17,28,0.5) 58%, rgba(8,17,28,0) 76%)',
-          }}
-        />
-
-        <div className="hidden md:flex items-center absolute inset-0 z-10">
-          <div className="w-full max-w-7xl mx-auto px-8 xl:px-12">
-            {/* Left column: headline + badges + form + CTAs */}
-            <div style={{ maxWidth: 'clamp(380px, 48%, 600px)' }}>
-              <h1
-                className="text-white font-extrabold leading-tight mb-4"
-                style={{ fontSize: 'clamp(30px, 3.8vw, 66px)', letterSpacing: '-0.025em' }}
-              >
-                Unlock 25% Off<br />Your First Order!
-              </h1>
-
-              <p
-                className="mb-6"
-                style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(12px, 1.1vw, 16px)' }}
-              >
-                Subscribe for exclusive offers &amp; the peptides we trust.
-              </p>
-
-              {/* Trust badges */}
-              <div className="flex gap-6 mb-6">
-                {[
-                  { icon: Shield, label: 'Research Grade' },
-                  { icon: FlaskConical, label: 'Third-Party Tested' },
-                  { icon: CheckCircle, label: 'Trusted Quality' },
-                ].map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex items-center gap-1.5">
-                    <Icon size={15} style={{ color: '#3A85E0', flexShrink: 0 }} />
-                    <span
-                      className="text-white/70"
-                      style={{ fontSize: 'clamp(10px, 0.8vw, 12px)', fontFamily: 'var(--font-jetbrains)' }}
-                    >
-                      {label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Subscribe form */}
-              <form onSubmit={e => e.preventDefault()} className="flex items-center mb-5" style={{ maxWidth: 440 }}>
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  className="flex-1 outline-none"
-                  style={{
-                    padding: 'clamp(10px, 1.05vw, 14px) clamp(12px, 1.4vw, 20px)',
-                    fontSize: 'clamp(12px, 0.95vw, 14px)',
-                    background: 'rgba(255,255,255,0.96)',
-                    borderRadius: '50px 0 0 50px',
-                    border: 'none',
-                    color: '#0E1B2E',
-                    fontFamily: 'inherit',
-                    minWidth: 0,
-                  }}
-                />
-                <button
-                  type="submit"
-                  style={{
-                    padding: 'clamp(10px, 1.05vw, 14px) clamp(14px, 1.7vw, 24px)',
-                    fontSize: 'clamp(12px, 0.95vw, 14px)',
-                    fontWeight: 700,
-                    background: '#0E1B2E',
-                    borderRadius: '0 50px 50px 0',
-                    border: 'none',
-                    cursor: 'pointer',
-                    color: '#fff',
-                    fontFamily: 'inherit',
-                    flexShrink: 0,
-                    transition: 'background 0.2s',
-                  }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#1568D3' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#0E1B2E' }}
-                >
-                  Subscribe
-                </button>
-              </form>
-
-              {/* CTAs */}
-              <div className="flex gap-3">
-                <Link
-                  href="/shop"
-                  className="inline-flex items-center gap-2 rounded-xl font-semibold text-white"
-                  style={{
-                    background: '#1568D3',
-                    padding: 'clamp(9px, 0.9vw, 13px) clamp(14px, 1.8vw, 22px)',
-                    fontSize: 'clamp(11px, 0.9vw, 14px)',
-                  }}
-                >
-                  Shop Peptides <ArrowRight size={14} />
-                </Link>
-                <Link
-                  href="/coa"
-                  className="inline-flex items-center gap-2 rounded-xl font-semibold text-white/80 border"
-                  style={{
-                    borderColor: 'rgba(255,255,255,0.2)',
-                    background: 'rgba(255,255,255,0.07)',
-                    padding: 'clamp(9px, 0.9vw, 13px) clamp(14px, 1.8vw, 22px)',
-                    fontSize: 'clamp(11px, 0.9vw, 14px)',
-                  }}
-                >
-                  <FileCheck size={14} /> COA Library
-                </Link>
-              </div>
-            </div>
-          </div>
+          className="hidden md:block absolute left-0 z-10"
+          style={{ top: '63%', width: '44%', padding: '0 3% 0 5%' }}
+        >
+          <form
+            onSubmit={e => e.preventDefault()}
+            className="flex items-center"
+            style={{ maxWidth: 420 }}
+          >
+            <input
+              type="email"
+              placeholder="Email address"
+              className="flex-1 outline-none"
+              style={{
+                padding: 'clamp(10px, 1.1vw, 14px) clamp(12px, 1.5vw, 20px)',
+                fontSize: 'clamp(12px, 1vw, 14px)',
+                background: 'rgba(255,255,255,0.96)',
+                borderRadius: '50px 0 0 50px',
+                border: 'none',
+                color: '#0E1B2E',
+                fontFamily: 'inherit',
+                minWidth: 0,
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                padding: 'clamp(10px, 1.1vw, 14px) clamp(14px, 1.8vw, 24px)',
+                fontSize: 'clamp(12px, 1vw, 14px)',
+                fontWeight: 700,
+                background: '#0E1B2E',
+                borderRadius: '0 50px 50px 0',
+                border: 'none',
+                cursor: 'pointer',
+                color: '#fff',
+                fontFamily: 'inherit',
+                flexShrink: 0,
+                transition: 'background 0.2s',
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#1568D3' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#0E1B2E' }}
+            >
+              Subscribe
+            </button>
+          </form>
         </div>
 
         {/* Bottom fade to white */}
