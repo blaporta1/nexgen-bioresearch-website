@@ -91,26 +91,14 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* ─── HERO ─── */}
       <section
-        className="relative overflow-hidden"
+        className="hero-section relative overflow-hidden"
         aria-label="Unlock 25% Off Your First Order — Subscribe for exclusive offers"
-        style={{
-          backgroundImage: 'url(/images/hero-bg-2.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat',
-          aspectRatio: '16 / 9',
-          minHeight: '520px',
-          maxHeight: '90vh',
-        }}
+        style={{ aspectRatio: '16 / 9', minHeight: '520px', maxHeight: '90vh' }}
       >
         {/* Email subscribe form — below trust badges, above logo */}
         <div
-          className="absolute left-0"
-          style={{
-            top: '63%',
-            width: '44%',
-            padding: '0 3% 0 5%',
-          }}
+          className="hero-form-wrapper absolute left-0"
+          style={{ top: '63%', width: '44%', padding: '0 3% 0 5%' }}
         >
           <form
             onSubmit={e => e.preventDefault()}
@@ -182,12 +170,12 @@ export default function HomePage() {
       </section>
 
       {/* ─── FEATURED PRODUCTS ─── */}
-      <section className="section-gradient py-24">
+      <section className="section-gradient py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex items-end justify-between mb-8 md:mb-12">
             <div>
               <p className="data-label mb-2">Most Researched</p>
-              <h2 className="text-navy" style={{ fontSize: 36, fontWeight: 680, letterSpacing: '-0.02em' }}>
+              <h2 className="text-navy" style={{ fontSize: 'clamp(22px, 5vw, 36px)', fontWeight: 680, letterSpacing: '-0.02em' }}>
                 Featured Compounds
               </h2>
             </div>
@@ -276,11 +264,11 @@ export default function HomePage() {
       </section>
 
       {/* ─── CATEGORIES ─── */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <p className="data-label mb-2">Browse by Type</p>
-            <h2 style={{ fontSize: 36, fontWeight: 680, letterSpacing: '-0.02em', color: '#0E1B2E' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 5vw, 36px)', fontWeight: 680, letterSpacing: '-0.02em', color: '#0E1B2E' }}>
               Research Categories
             </h2>
           </div>
@@ -289,7 +277,7 @@ export default function HomePage() {
             {CATEGORIES.map(cat => (
               <Link key={cat.id} href={`/shop?category=${cat.id}`}>
                 <div
-                  className="group rounded-2xl p-8 cursor-pointer transition-all duration-250 hover:-translate-y-1"
+                  className="group rounded-2xl p-5 md:p-8 cursor-pointer transition-all duration-250 hover:-translate-y-1"
                   style={{
                     background: 'linear-gradient(135deg, #0E1B2E 0%, #162440 100%)',
                     boxShadow: '0 4px 24px rgba(14,27,46,0.12)',
@@ -358,12 +346,12 @@ export default function HomePage() {
       </section>
 
       {/* ─── VALUE PROPS ─── */}
-      <section className="py-24" style={{ background: '#F4F7FB' }}>
+      <section className="py-12 md:py-24" style={{ background: '#F4F7FB' }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <p className="data-label mb-2">Why Researchers Choose NexGen</p>
             <h2
-              style={{ fontSize: 36, fontWeight: 680, letterSpacing: '-0.02em', color: '#0E1B2E' }}
+              style={{ fontSize: 'clamp(22px, 5vw, 36px)', fontWeight: 680, letterSpacing: '-0.02em', color: '#0E1B2E' }}
             >
               Built for the Laboratory
             </h2>
@@ -408,7 +396,7 @@ export default function HomePage() {
 
       {/* ─── COA TRANSPARENCY BAND ─── */}
       <section
-        className="relative overflow-hidden py-20"
+        className="relative overflow-hidden py-10 md:py-20"
         style={{ background: 'linear-gradient(135deg, #0E1B2E 0%, #0D3270 100%)' }}
       >
         <div
@@ -426,7 +414,7 @@ export default function HomePage() {
               </p>
               <h2
                 className="text-white mb-4"
-                style={{ fontSize: 36, fontWeight: 680, letterSpacing: '-0.02em' }}
+                style={{ fontSize: 'clamp(22px, 5vw, 36px)', fontWeight: 680, letterSpacing: '-0.02em' }}
               >
                 Every Batch, Every Result.
                 <br />
@@ -437,7 +425,7 @@ export default function HomePage() {
                 batch number, or test date. Download any Certificate of Analysis in PDF format.
                 If a batch fails our purity threshold, we quarantine it and publish the result.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3">
                 <Link
                   href="/coa"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white"
@@ -519,11 +507,11 @@ export default function HomePage() {
       </section>
 
       {/* ─── PROCESS ─── */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <p className="data-label mb-2">How It Works</p>
-            <h2 style={{ fontSize: 36, fontWeight: 680, letterSpacing: '-0.02em', color: '#0E1B2E' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 5vw, 36px)', fontWeight: 680, letterSpacing: '-0.02em', color: '#0E1B2E' }}>
               From Synthesis to Your Lab
             </h2>
           </div>
@@ -611,12 +599,12 @@ export default function HomePage() {
       </section>
 
       {/* ─── CTA BAND ─── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <NexGenMark size={48} navyColor="#0E1B2E" signalColor="#1568D3" />
           <h2
             className="text-navy mt-6 mb-3"
-            style={{ fontSize: 36, fontWeight: 680, letterSpacing: '-0.02em' }}
+            style={{ fontSize: 'clamp(22px, 5vw, 36px)', fontWeight: 680, letterSpacing: '-0.02em' }}
           >
             Ready to Advance Your Research?
           </h2>

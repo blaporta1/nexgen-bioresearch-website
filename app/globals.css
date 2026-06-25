@@ -203,3 +203,40 @@ input[type="checkbox"] {
 [id] {
   scroll-margin-top: 100px;
 }
+
+/* ── Mobile compliance banner: single-line scroll instead of wrapping ── */
+@media (max-width: 767px) {
+  .compliance-banner {
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: left;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .compliance-banner::-webkit-scrollbar { display: none; }
+}
+
+/* ── Hero responsive ── */
+.hero-section {
+  background-image: url(/images/hero-bg-2.jpeg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  /* Anchor image to left so headline & badges stay visible */
+  .hero-section {
+    background-position: left top;
+    min-height: 460px !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+  }
+
+  /* Widen form so it's comfortably tappable */
+  .hero-form-wrapper {
+    top: 60% !important;
+    width: 84% !important;
+    padding: 0 4% 0 5% !important;
+  }
+}
