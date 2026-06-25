@@ -13,7 +13,7 @@ export default function RefundsPage() {
           </section>
           <section>
             <h2 className="text-navy font-semibold text-lg mb-3">Damaged or Incorrect Orders</h2>
-            <p>If your order arrives damaged, temperature-compromised, or contains incorrect items, contact support@nexgenbio.com within 48 hours of delivery with photographic evidence. We evaluate all claims individually and typically provide replacement shipment for verified issues at no charge.</p>
+            <p>If your order arrives damaged, temperature-compromised, or contains incorrect items, contact support@nexgenbioresearch.com within 48 hours of delivery with photographic evidence. We evaluate all claims individually and typically provide replacement shipment for verified issues at no charge.</p>
           </section>
           <section>
             <h2 className="text-navy font-semibold text-lg mb-3">Quality Issues</h2>
@@ -25,7 +25,7 @@ export default function RefundsPage() {
           </section>
           <section>
             <h2 className="text-navy font-semibold text-lg mb-3">Contact</h2>
-            <p>For refund or return inquiries: support@nexgenbio.com</p>
+            <p>For refund or return inquiries: support@nexgenbioresearch.com</p>
           </section>
         </div>
       </div>

@@ -24,7 +24,7 @@ const FOOTER_LINKS = {
     { label: 'Research-Use Compliance', href: '/legal/compliance' },
   ],
   Contact: [
-    { label: 'support@nexgenbio.com', href: 'mailto:support@nexgenbio.com' },
+    { label: 'support@nexgenbioresearch.com', href: 'mailto:support@nexgenbioresearch.com' },
     { label: 'Wholesale Inquiries', href: '/wholesale' },
   ],
 }
@@ -107,7 +107,7 @@ export default function Footer() {
             className="text-[11px] text-white/30"
             style={{ fontFamily: 'var(--font-jetbrains)' }}
           >
-            © 2026 NEXGEN BIORESEARCH LLC. ALL RIGHTS RESERVED. · NEXGENBIO.COM
+            © 2026 NEXGEN BIORESEARCH LLC. ALL RIGHTS RESERVED. · NEXGENBIORESEARCH.COM
           </p>
           <div className="flex items-center gap-6">
             <Link href="/legal/privacy" className="text-[11px] text-white/30 hover:text-white/60 transition-colors">

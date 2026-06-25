@@ -37,7 +37,7 @@ export default function Navbar() {
       {/* Compliance Banner */}
       <div className="compliance-banner">
         FOR IN-VITRO RESEARCH AND LABORATORY USE ONLY · NOT FOR HUMAN OR VETERINARY USE ·{' '}
-        <span style={{ color: '#3A85E0' }}>NEXGENBIO.COM</span>
+        <span style={{ color: '#3A85E0' }}>NEXGENBIORESEARCH.COM</span>
       </div>
 
       {/* Main Nav */}

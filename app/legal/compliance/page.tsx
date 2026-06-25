@@ -29,7 +29,7 @@ export default function CompliancePage() {
           </section>
           <section>
             <h2 className="text-navy font-semibold text-lg mb-3">Contact for Compliance Inquiries</h2>
-            <p>Regulatory inquiries, law enforcement requests, or FDA correspondence: legal@nexgenbio.com</p>
+            <p>Regulatory inquiries, law enforcement requests, or FDA correspondence: legal@nexgenbioresearch.com</p>
           </section>
         </div>
       </div>

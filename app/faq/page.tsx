@@ -92,7 +92,7 @@ const FAQ_SECTIONS = [
     faqs: [
       {
         q: 'Where can I find the COA for my order?',
-        a: 'COAs are accessible three ways: (1) Scan the QR code printed on each vial label, (2) Search our public COA Library at nexgenbio.com/coa using your batch number, (3) The COA download link is included in your order confirmation email. No account login is required to access COAs.',
+        a: 'COAs are accessible three ways: (1) Scan the QR code printed on each vial label, (2) Search our public COA Library at nexgenbioresearch.com/coa using your batch number, (3) The COA download link is included in your order confirmation email. No account login is required to access COAs.',
       },
       {
         q: 'What information is included in the COA?',
@@ -100,7 +100,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: 'Are COAs publicly accessible?',
-        a: 'Yes. Our COA database is publicly accessible with no login required. We believe COA transparency is a fundamental right for researchers — not a gated feature. Search by compound name, batch number, or CAS number at nexgenbio.com/coa.',
+        a: 'Yes. Our COA database is publicly accessible with no login required. We believe COA transparency is a fundamental right for researchers — not a gated feature. Search by compound name, batch number, or CAS number at nexgenbioresearch.com/coa.',
       },
       {
         q: 'What happens if a batch fails testing?',
@@ -283,7 +283,7 @@ export default function FAQPage() {
             Our research support team responds within 2 business hours Monday–Friday.
           </p>
           <a
-            href="mailto:support@nexgenbio.com"
+            href="mailto:support@nexgenbioresearch.com"
             className="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm"
           >
             Email Support Team

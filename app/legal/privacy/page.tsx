@@ -22,11 +22,11 @@ export default function PrivacyPage() {
           </section>
           <section>
             <h2 className="text-navy font-semibold text-lg mb-3">California Privacy Rights (CCPA)</h2>
-            <p>California residents have the right to request disclosure of personal information collected, request deletion of personal information, and opt out of sale of personal information. NexGen does not sell personal information to third parties. To exercise your rights, contact privacy@nexgenbio.com.</p>
+            <p>California residents have the right to request disclosure of personal information collected, request deletion of personal information, and opt out of sale of personal information. NexGen does not sell personal information to third parties. To exercise your rights, contact privacy@nexgenbioresearch.com.</p>
           </section>
           <section>
             <h2 className="text-navy font-semibold text-lg mb-3">Contact</h2>
-            <p>Privacy inquiries: privacy@nexgenbio.com</p>
+            <p>Privacy inquiries: privacy@nexgenbioresearch.com</p>
           </section>
         </div>
       </div>
