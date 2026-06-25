@@ -96,13 +96,28 @@ export default function HomePage() {
         style={{ aspectRatio: '16 / 9', minHeight: '520px', maxHeight: '90vh' }}
       >
         {/* ── MOBILE hero content (gradient bg, HTML text) ── */}
-        <div className="md:hidden relative z-10 px-6 pt-10 pb-20">
+        <div className="md:hidden relative z-10 px-6 pt-8 pb-20">
+
+          {/* Headline */}
           <h1
-            className="text-white font-extrabold leading-tight mb-6"
-            style={{ fontSize: 'clamp(34px, 10vw, 48px)', letterSpacing: '-0.025em' }}
+            className="text-white font-extrabold leading-tight mb-4"
+            style={{ fontSize: 'clamp(34px, 9vw, 48px)', letterSpacing: '-0.025em' }}
           >
             Unlock 25% Off<br />Your First Order!
           </h1>
+
+          {/* Vial image — below headline, right-aligned */}
+          <div className="flex justify-end mb-4 -mt-2">
+            <img
+              src="/images/products/ghk-cu.png"
+              alt="NexGen GHK-Cu 50mg vial"
+              style={{
+                width: 200,
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 12px 32px rgba(0,0,0,0.5))',
+              }}
+            />
+          </div>
 
           {/* Trust badges */}
           <div className="flex gap-5 mb-8">
