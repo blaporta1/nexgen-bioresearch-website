@@ -293,7 +293,7 @@ export default function HomePage() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block', padding: '12px' }}
                     />
                     {product.category === 'wolverine-stack' && (
                       <span

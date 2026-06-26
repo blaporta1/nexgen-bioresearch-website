@@ -195,9 +195,10 @@ function ProductCard({ product }: { product: Product }) {
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
+              objectFit: 'contain',
               objectPosition: 'center',
               display: 'block',
+              padding: '16px',
             }}
           />
           {product.featured && (

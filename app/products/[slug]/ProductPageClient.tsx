@@ -42,9 +42,10 @@ export default function ProductPageClient({ product, related }: Props) {
                 style={{
                   width: '100%',
                   aspectRatio: '1 / 1',
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                   objectPosition: 'center',
                   display: 'block',
+                  padding: '24px',
                 }}
               />
               {/* Purity overlay badge */}
@@ -160,7 +161,7 @@ export default function ProductPageClient({ product, related }: Props) {
                       <img
                         src={rp.image}
                         alt={rp.name}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                        style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block', padding: '12px' }}
                       />
                     </div>
                     <div className="p-4">
