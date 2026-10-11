@@ -147,7 +147,8 @@ export default function AdminLogin() {
         </div>
 
         <p style={{ textAlign: 'center', marginTop: 20, fontFamily: 'var(--font-jetbrains)', fontSize: 10, color: 'rgba(255,255,255,0.2)', letterSpacing: '0.04em' }}>
-          First time? Run POST /auth/setup to create your account
+          First time?{' '}
+          <a href="/admin/setup" style={{ color: '#3A85E0', textDecoration: 'none' }}>Create your admin account →</a>
         </p>
       </div>
     </div>
